@@ -1,5 +1,18 @@
 <?php
     session_start();
+	
+	// Function to check if a button is disabled
+	function isButtonDisabled($buttonName)
+	{
+		return isset($_SESSION['disabled_buttons'][$buttonName]);
+	}
+
+// Function to disable a button
+	function disableButton($buttonName)
+	{
+		$_SESSION['disabled_buttons'][$buttonName] = true;
+	}
+	
 
     #a function i found online that just works
     function csv_to_multidimension_array($filename='', $delimiter=',')
@@ -43,6 +56,8 @@
     if(isset($_POST['incorrect'])){
         header("location:index.php");
     }
+	
+	
 
 ?>
 
@@ -53,13 +68,13 @@
 </head>
 <body>
 <div id = buttons>
+    <form method="post" action="" onclick="this.style.display='none'">
+        <input type="submit" name="showAnswer" value="Show Answer">
+    </form>
     <form method="post" action="">
         <input type="submit" name="team1" value="Team 1 + <?php echo $pointVal; ?>">
         <input type="submit" name="team2" value="Team 2 + <?php echo $pointVal; ?>">
         <input type="submit" name="incorrect" value="Incorrect Answer">
-    </form>
-    <form method="post" action="" onclick="this.style.display='none'">
-        <input type="submit" name="showAnswer" value="Show Answer">
     </form>
 </body>
 </html>

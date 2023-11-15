@@ -9,7 +9,7 @@ html {
 .flex-container > td {
     background-color: blue;
     background: linear-gradient(to top left, #000088, #0000ff);
-    color: white;
+    color: yellow;
     margin: 0px;
     padding: 20px;
     font-size: 35px;
@@ -19,7 +19,7 @@ html {
 }
 
 .banner {
-    color: white;
+    color: yellow;
     background: linear-gradient(to top left, #000088, #0000ff);
     margin: 0px;
     font-size: 40px;
@@ -33,7 +33,7 @@ html {
 
 button {
     background-color: transparent;
-    color: white;
+    color: yellow;
     margin: 0px;
     padding: 20px;
     font-size: 35px;
@@ -44,7 +44,7 @@ button {
 }
 .flex-container > td a {
     text-decoration: none; /* Remove underline from links */
-    color: white;
+    color: yellow;
     display: block;
     background-color: transparent;
     padding: 20px;
@@ -52,4 +52,8 @@ button {
     border: transparent solid 1px;
     width: 100%; /* Make the link fill the entire TD */
     height: 100%; /* Make the link fill the entire TD */
+}
+
+.flex-container > td a:visited {
+	color:lightblue;
 }
