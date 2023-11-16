@@ -66,6 +66,7 @@
     <form method="post" action="">
         <input type="submit" name="team1" value="Team 1 + <?php echo $pointVal; ?>">
         <input type="submit" name="team2" value="Team 2 + <?php echo $pointVal; ?>">
+        <br>
         <input type="submit" name="Team1incorrect" value="Team1 incorrect Incorrect Answer -<?php echo $pointVal; ?>">
         <input type="submit" name="Team2incorrect" value="Team2 incorrect Incorrect Answer -<?php echo $pointVal; ?>">
     </form>
