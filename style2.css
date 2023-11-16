@@ -1,5 +1,6 @@
 html {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: blue;
 }
 
 .flex-container {
@@ -9,7 +10,7 @@ html {
 .flex-container > td {
     background-color: blue;
     background: linear-gradient(to top left, #000088, #0000ff);
-    color: white;
+    color: gold;
     margin: 0px;
     padding: 20px;
     font-size: 35px;
@@ -18,8 +19,8 @@ html {
     height:75px;
 }
 
-.banner {
-    color: white;
+.banner, table, .flex-container > td{
+    color: gold;
     background: linear-gradient(to top left, #000088, #0000ff);
     margin: 0px;
     font-size: 40px;
@@ -33,7 +34,7 @@ html {
 
 button {
     background-color: transparent;
-    color: white;
+    color: gold;
     margin: 0px;
     padding: 20px;
     font-size: 35px;
@@ -44,7 +45,7 @@ button {
 }
 .flex-container > td a {
     text-decoration: none; /* Remove underline from links */
-    color: white;
+    color: gold;
     display: block;
     background-color: transparent;
     padding: 20px;
@@ -53,3 +54,8 @@ button {
     width: 100%; /* Make the link fill the entire TD */
     height: 100%; /* Make the link fill the entire TD */
 }
+
+
+.flex-container > td a:visited{
+    color: blue;
+} 

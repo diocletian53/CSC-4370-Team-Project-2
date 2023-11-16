@@ -25,5 +25,10 @@ td:hover {
 }
 
 a {
-    color: white;
+    color: gold;
+}
+.disable-button{
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
 }

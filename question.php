@@ -34,14 +34,22 @@
 
     if(isset($_POST['team1'])){
         $_SESSION['score1'] = $_SESSION['score1'] + $pointVal;
-        header("location:index.php");
+        header("location:index2.php");
+    }
+    if(isset($_POST['team1_wrong'])){
+        $_SESSION['score1'] = $_SESSION['score1'] - $pointVal;
+        header("location:index2.php");
     }
     if(isset($_POST['team2'])){
         $_SESSION['score2'] = $_SESSION['score2'] + $pointVal;
-        header("location:index.php");
+        header("location:index2.php");
     }
-    if(isset($_POST['incorrect'])){
-        header("location:index.php");
+    if(isset($_POST['team2_wrong'])){
+        $_SESSION['score2'] = $_SESSION['score2'] - $pointVal;
+        header("location:index2.php");
+    }
+    if(isset($_POST['back'])){
+        header("location:index2.php");
     }
 
 ?>
@@ -56,7 +64,9 @@
     <form method="post" action="">
         <input type="submit" name="team1" value="Team 1 + <?php echo $pointVal; ?>">
         <input type="submit" name="team2" value="Team 2 + <?php echo $pointVal; ?>">
-        <input type="submit" name="incorrect" value="Incorrect Answer">
+        <input type="submit" name="team1_wrong" value="Team 1 - <?php echo $pointVal; ?>">
+        <input type="submit" name="team2_wrong" value="Team 2 - <?php echo $pointVal; ?>">
+        <input type="submit" name="back" value="Go Back">
     </form>
     <form method="post" action="" onclick="this.style.display='none'">
         <input type="submit" name="showAnswer" value="Show Answer">
