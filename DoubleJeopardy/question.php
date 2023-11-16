@@ -43,6 +43,17 @@
         header("location:index2.php");
     }
 
+    if(isset($_POST['Team1incorrect'])){
+        $_SESSION['score1'] = $_SESSION['score1'] - $pointVal;
+        header("location:index2.php");
+    }
+    if(isset($_POST['Team2incorrect'])){
+        $_SESSION['score2'] = $_SESSION['score2'] - $pointVal;
+        header("location:index2.php");
+    }
+    
+    
+
 ?>
 
 <!DOCTYPE HTML>
@@ -55,7 +66,8 @@
     <form method="post" action="">
         <input type="submit" name="team1" value="Team 1 + <?php echo $pointVal; ?>">
         <input type="submit" name="team2" value="Team 2 + <?php echo $pointVal; ?>">
-        <input type="submit" name="incorrect" value="Incorrect Answer">
+        <input type="submit" name="Team1incorrect" value="Team1 incorrect Incorrect Answer -<?php echo $pointVal; ?>">
+        <input type="submit" name="Team2incorrect" value="Team2 incorrect Incorrect Answer -<?php echo $pointVal; ?>">
     </form>
     <form method="post" action="" onclick="this.style.display='none'">
         <input type="submit" name="showAnswer" value="Show Answer">
