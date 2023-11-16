@@ -30,7 +30,7 @@
         echo("<h2>What is ".$answer."</h2><br>");
     }
 
-    $pointVal = ($row+1)*100;
+    $pointVal = ($row+1)*400;
 
     if(isset($_POST['team1'])){
         $_SESSION['score1'] = $_SESSION['score1'] + $pointVal;
