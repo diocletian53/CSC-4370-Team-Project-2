@@ -1,0 +1,24 @@
+html{
+    background-color: blue;
+}
+h1, h2, #buttons{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: yellow;
+    font-size: 60px;
+    
+}
+
+input[type=submit]{
+    /*background-color: rgb(141, 229, 33);*/
+    background-color: yellow;
+    border: 5px solid black;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: large;
+    padding: 60px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
