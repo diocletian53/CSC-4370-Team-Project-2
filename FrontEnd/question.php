@@ -1,7 +1,6 @@
 <?php
     session_start();
 
-    #a function i found online that just works
     function csv_to_multidimension_array($filename='', $delimiter=',')
     {
         if(!file_exists($filename) || !is_readable($filename)) {
@@ -34,14 +33,14 @@
 
     if(isset($_POST['team1'])){
         $_SESSION['score1'] = $_SESSION['score1'] + $pointVal;
-        header("location:index.php");
+        header("location:index2.php");
     }
     if(isset($_POST['team2'])){
         $_SESSION['score2'] = $_SESSION['score2'] + $pointVal;
-        header("location:index.php");
+        header("location:index2.php");
     }
     if(isset($_POST['incorrect'])){
-        header("location:index.php");
+        header("location:index2.php");
     }
 
 ?>
